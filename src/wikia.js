@@ -1,8 +1,16 @@
-// implementation of the vim.wikia.com API against a cors-enabled proxy server
+// An implementation of the vim.wikia.com API against a cors-enabled proxy server
 
+// TODO: replace the localhost default with an external proxy server (I need to make one)
 export const fetchTips = (domain = "http://localhost:9090/vim.wikia.com") => {
 
 	let url = new URL(domain + "/api/v1/Articles/List")
+	const params = {
+		category: "VimTip",
+		limit: 10000,
+	}
+	Object.keys(params).forEach(
+		key => url.searchParams.append(key, params[key])
+	)
 
 	let headers = new Headers()
 	headers.append("Accept","application/json")
