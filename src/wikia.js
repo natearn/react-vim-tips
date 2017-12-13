@@ -16,9 +16,9 @@ export const fetchTips = (domain = "http://localhost:9090/vim.wikia.com") => {
 	}
 
 	return fetch(url,context)
-		.then(res => {
-			if (res.ok) {
-				return res.json()
+		.then(response => {
+			if (response.ok) {
+				return response.json()
 			} else {
 				throw new Error("API response was not OK")
 			}
