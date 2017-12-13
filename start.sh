@@ -14,6 +14,7 @@ then docker exec -it "$CONTAINER" "$COMMAND"
 else docker run -it --rm --name "$CONTAINER" \
   -v $(pwd):/home/node/app \
   -v /home/node/app/node_modules \
+  -p 9090:9090 \
   "$IMAGE_NAME" \
   "$COMMAND"
 fi
