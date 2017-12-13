@@ -1,0 +1,25 @@
+{
+  "name": "react-vim-tips",
+  "version": "1.0.0",
+  "description": "An example of a plugable react component",
+  "main": "dist/bundle.js",
+  "repository": "git@github.com:natearn/react-vim-tips.git",
+  "author": "Nathan Arnold (natearn@natearn.info)",
+  "license": "MIT",
+  "scripts": {
+    "watch": "webpack --progress --colors --watch"
+  },
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.5.2",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "style-loader": "^0.18.2",
+    "webpack": "^2.6.1"
+  }
+}
