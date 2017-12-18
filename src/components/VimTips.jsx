@@ -1,5 +1,6 @@
 import React from 'react'
 import { fetchTips } from 'wikia'
+import Transition from 'react-addons-css-transition-group'
 
 class VimTips extends React.Component {
 
@@ -37,7 +38,13 @@ class VimTips extends React.Component {
 		const tip = this.state.tips[this.state.index]
 		return (
 			<section>
-				<a href={tip.url}>{tip.title}</a>
+				<Transition
+					transitionName="link"
+					transitionEnterTimeout={500}
+					transitionLeaveTimeout={500}
+				>
+					<a key={tip.url} href={tip.url}>{tip.title}</a>
+				</Transition>
 			</section>
 		)
 	}

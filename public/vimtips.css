@@ -1,0 +1,32 @@
+.VimTips section {
+	overflow: hidden;
+	position: relative;
+}
+
+.VimTips * {
+	height: 1.5em;
+	line-height: 1.5em;
+	white-space: nowrap;
+}
+
+.VimTips .link-enter {
+	position: absolute;
+	transform: translateY(-100%);
+}
+
+.VimTips .link-enter.link-enter-active {
+	position: absolute;
+	transform: translateY(0%);
+	transition: 500ms;
+}
+
+.VimTips .link-leave {
+	position: absolute;
+	transform: translateY(0%);
+}
+
+.VimTips .link-leave.link-leave-active {
+	position: absolute;
+	transform: translateY(100%);
+	transition: 500ms;
+}
