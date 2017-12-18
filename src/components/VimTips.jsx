@@ -13,7 +13,7 @@ class VimTips extends React.Component {
 			index: 0
 		}
 		fetchTips()
-			.then(tips => this.setState({ tips: tips }))
+			.then(tips => this.setState({ tips: this.state.tips.concat(tips) }))
 			.then(() => this.setRandomTip())
 			.then(() => this.every(10000,() => this.setRandomTip()))
 	}
