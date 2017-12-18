@@ -1,7 +1,7 @@
 // An implementation of the vim.wikia.com API against a cors-enabled proxy server
 
 // TODO: replace the localhost default with an external proxy server (I need to make one)
-export const fetchTips = (domain = "http://localhost:9090/vim.wikia.com") => {
+export const fetchWikiaArticles = (domain = "http://localhost:9090/vim.wikia.com") => {
 
 	let url = new URL(domain + "/api/v1/Articles/List")
 	const params = {
@@ -32,3 +32,9 @@ export const fetchTips = (domain = "http://localhost:9090/vim.wikia.com") => {
 			}
 		})
 }
+
+// Add the basepath to the urls of the articles
+export const fetchTips = (domain) => fetchWikiaArticles(domain)
+	.then(json => json.items.map(tip =>
+		Object.assign({},tip,{url: json.basepath + tip.url})
+	))
