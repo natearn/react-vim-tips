@@ -13,7 +13,10 @@
 	<body>
 		<div id="VimTips" class="VimTips"></div>
 		<script>
-			ReactVimTips.render(document.getElementById("VimTips"))
+			ReactVimTips.render(
+				{ interval: 5000 },
+				document.getElementById("VimTips")
+			)
 		</script>
 	</body>
 </html>

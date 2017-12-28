@@ -1,11 +1,12 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { fetchTips } from 'wikia'
 import Animate from 'react-animate-on-change'
 
 class VimTips extends React.Component {
 
-	constructor() {
-		super()
+	constructor(props) {
+		super(props)
 		this.state = {
 			tips: [{
 				url: "https://github.com/natearn/random-vim-tips",
@@ -15,8 +16,7 @@ class VimTips extends React.Component {
 		}
 		fetchTips()
 			.then(tips => this.setState({ tips: this.state.tips.concat(tips) }))
-			.then(() => this.setRandomTip())
-			.then(() => this.every(10000,() => this.setRandomTip()))
+			.then(() => this.every(props.interval,() => this.setRandomTip()))
 	}
 
 	setRandomTip() {
@@ -48,6 +48,14 @@ class VimTips extends React.Component {
 			</section>
 		)
 	}
+}
+
+VimTips.propTypes = {
+	interval: PropTypes.number,
+}
+
+VimTips.defaultProps = {
+	interval: 10000,
 }
 
 export default VimTips
