@@ -1,6 +1,6 @@
 import React from 'react'
 import { fetchTips } from 'wikia'
-import Transition from 'react-addons-css-transition-group'
+import Animate from 'react-animate-on-change'
 
 class VimTips extends React.Component {
 
@@ -38,13 +38,13 @@ class VimTips extends React.Component {
 		const tip = this.state.tips[this.state.index]
 		return (
 			<section>
-				<Transition
-					transitionName="link"
-					transitionEnterTimeout={500}
-					transitionLeaveTimeout={500}
+				<Animate
+					baseClassName="link"
+					animationClassName="changed"
+					animate={true}
 				>
-					<a key={tip.url} href={tip.url}>{tip.title}</a>
-				</Transition>
+					<a href={tip.url}>{tip.title}</a>
+				</Animate>
 			</section>
 		)
 	}
