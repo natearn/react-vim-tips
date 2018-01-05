@@ -38,13 +38,16 @@ class VimTips extends React.Component {
 		const tip = this.state.tips[this.state.index]
 		return (
 			<section>
-				<Animate
-					baseClassName="link"
-					animationClassName="changed"
-					animate={true}
-				>
-					<a href={tip.url}>{tip.title}</a>
-				</Animate>
+				<img src="Vimlogo.svg" />
+				<p>
+					<Animate
+						baseClassName="link"
+						animationClassName="changed"
+						animate={true}
+					>
+						<a href={tip.url}>{tip.title}</a>
+					</Animate>
+				</p>
 			</section>
 		)
 	}
