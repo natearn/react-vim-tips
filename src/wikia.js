@@ -1,7 +1,7 @@
 // An implementation of the vim.wikia.com API against a cors-enabled proxy server
 
 // TODO: replace the localhost default with an external proxy server (I need to make one)
-export const fetchWikiaArticles = (domain = "http://localhost:9090/vim.wikia.com") => {
+export const fetchWikiaArticles = (domain = "https://vimtips-proxy.herokuapp.com:443/vim.wikia.com") => {
 
 	let url = new URL(domain + "/api/v1/Articles/List")
 	const params = {
