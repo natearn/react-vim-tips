@@ -8,8 +8,12 @@ module.exports = {
     library: 'ReactVimTips',
   },
   resolve: {
-    extensions: ['.js','.jsx'],
-    modules: [path.resolve(__dirname, 'src'),'node_modules'],
+    extensions: ['.js','.jsx','.svg'],
+    modules: [
+      path.resolve(__dirname),
+      path.resolve(__dirname,'src'),
+      'node_modules',
+    ],
   },
   module: {
     rules: [
@@ -17,6 +21,11 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: ['babel-loader'],
+      },
+      {
+        test: /\.svg$/,
+        exclude: /node_modules/,
+        use: ['url-loader'],
       },
     ],
   },

@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { fetchTips } from 'wikia'
 import Animate from 'react-animate-on-change'
+import logo from 'public/Vimlogo.svg'
 
 class VimTips extends React.Component {
 
@@ -38,7 +39,7 @@ class VimTips extends React.Component {
 		const tip = this.state.tips[this.state.index]
 		return (
 			<section>
-				<img src="Vimlogo.svg" />
+				<img src={logo} />
 				<p>
 					<Animate
 						baseClassName="link"
