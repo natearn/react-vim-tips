@@ -1,9 +1,13 @@
 .VimTips section {
 	display: flex;
 	align-items: center;
-	position: relative;
 
-	background-color: green;
+	height: inherit;
+	width: inherit;
+	box-sizing: border-box;
+	overflow: hidden;
+
+	background-color: #25873D;
 	padding: 0.5em;
 }
 
@@ -14,28 +18,21 @@
 
 .VimTips p {
 	flex: 1 1 auto;
-	margin: auto;
-	overflow: hidden;
+	margin: 0;
+	text-align: center;
+	font-family: sans-serif;
 }
 
 .VimTips a:link {
-	color: lightgrey;
+	color: #CCCCCC;
 }
 
 .VimTips a:visited {
-	color: lightgrey;
-}
-
-.VimTips a {
-	display: block;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	overflow: hidden;
+	color: #AAAAAA;
 }
 
 .VimTips .link {
 	opacity: 1;
-	max-width: 100%;
 }
 
 .VimTips .link.changed {
