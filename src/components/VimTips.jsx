@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { fetchTips } from 'wikia'
 import Animate from 'react-animate-on-change'
-import logo from 'public/Vimlogo.svg'
+import logo from 'images/Vimlogo.svg'
 
 class VimTips extends React.Component {
 
