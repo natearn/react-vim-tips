@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
   entry: './src/main.js',
   output: {
-    filename: 'bundle.js',
+    filename: 'VimTips.js',
     path: path.resolve(__dirname, 'dist'),
     library: 'ReactVimTips',
   },
