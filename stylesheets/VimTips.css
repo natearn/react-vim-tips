@@ -13,6 +13,7 @@
 
 .VimTips img {
 	flex: 0 0 4em;
+	width: 4em; /* chrome isn't respecting flex-basis */
 	margin-right: 0.5em;
 }
 
